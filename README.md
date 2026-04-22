@@ -129,6 +129,63 @@ NEXT_PUBLIC_API_URL=http://localhost:4000
 
 ---
 
+```
+## Project Structure
+
+```bash
+.
+├── backend
+│   ├── src
+│   │   ├── index.ts                # Express app entry point
+│   │   ├── routes                 # API routes
+│   │   │   ├── auth.ts
+│   │   │   ├── events.ts
+│   │   │   ├── bookings.ts
+│   │   │   ├── checkin.ts
+│   │   │   ├── dashboard.ts
+│   │   │   ├── tiers.ts
+│   │   │   ├── promoCodes.ts
+│   │   │   └── waitlist.ts
+│   │   ├── middleware             # Auth middleware
+│   │   │   └── auth.ts
+│   │   ├── lib                    # Core utilities
+│   │   │   ├── jwt.ts
+│   │   │   ├── qr.ts
+│   │   │   ├── capacity.ts
+│   │   │   ├── transfer.ts
+│   │   │   ├── validations.ts
+│   │   │   └── prisma.ts
+│   ├── prisma
+│   │   ├── schema.prisma          # Database schema
+│   │   │── seed.ts                # Seed data
+│   └── package.json
+
+├── frontend
+│   ├── src
+│   │   ├── app                    # Next.js App Router
+│   │   │   ├── page.tsx           # Home (events list)
+│   │   │   ├── events/[id]        # Event details & booking
+│   │   │   ├── bookings           # User bookings
+│   │   │   ├── tickets/[id]       # Ticket QR view
+│   │   │   ├── login              # Login page
+│   │   │   ├── register           # Register page
+│   │   │   └── dashboard          # Organizer dashboard
+│   │   ├── components             # UI components
+│   │   ├── contexts               # Global state (Auth)
+│   │   ├── lib                    # API & utilities
+│   │   │   ├── api.ts
+│   │   │   └── utils.ts
+│   │   └── types                  # TypeScript types
+│   └── package.json
+
+├── submission                     # Screenshots for evaluation
+├── DECISIONS.md                   # Design decisions
+├── USER_REQUIREMENTS.md           # Feature requirements
+├── package.json                   # Root scripts
+└── README.md
+```
+```
+
 ## Key Modules
 
 * Booking System → Ticket purchase & cancellation
@@ -151,7 +208,8 @@ NEXT_PUBLIC_API_URL=http://localhost:4000
 
 ## Screenshots
 
-(Add screenshots here after implementation)
+<img width="1536" height="1024" alt="test1-create-promo-code" src="https://github.com/user-attachments/assets/9fa525f6-b408-4bd4-8ef4-3fd48aa07cd2" />
+
 
 ---
 
